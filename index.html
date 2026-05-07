@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Enrique George-Reyes | Investigador académico</title>
+  <meta name="description" content="Página profesional de Carlos Enrique George-Reyes, investigador académico especializado en innovación educativa, inteligencia artificial, alfabetización digital, pensamiento complejo y pedagogía Maker." />
+
+  <style>
+    :root {
+      --azul: #0f4c81;
+      --azul-oscuro: #082f4f;
+      --rojo: #d62839;
+      --fondo: #f4f7fb;
+      --blanco: #ffffff;
+      --texto: #1f2937;
+      --gris: #667085;
+      --linea: #d8e1ec;
+      --sombra: 0 18px 45px rgba(15, 76, 129, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contenedor {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--linea);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+      color: var(--azul-oscuro);
+      font-size: 1.05rem;
+    }
+
+    .marca-icono {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: var(--blanco);
+      background: linear-gradient(135deg, var(--azul), var(--rojo));
+      font-weight: 800;
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      color: var(--gris);
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      color: var(--azul);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 10% 10%, rgba(214, 40, 57, 0.16), transparent 28%),
+        radial-gradient(circle at 90% 10%, rgba(15, 76, 129, 0.18), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #edf5fb 100%);
+      padding: 82px 0;
+      border-bottom: 1px solid var(--linea);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 46px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid var(--linea);
+      color: var(--azul);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 22px rgba(15, 76, 129, 0.08);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.8rem);
+      color: var(--azul-oscuro);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      color: var(--texto);
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      line-height: 1.3;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      color: var(--gris);
+      font-size: 1.07rem;
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .botones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .boton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      border: 1px solid var(--linea);
+      transition: all 0.2s ease;
+    }
+
+    .boton:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(15, 76, 129, 0.16);
+    }
+
+    .boton-principal {
+      background: var(--azul);
+      color: var(--blanco);
+      border-color: var(--azul);
+    }
+
+    .boton-secundario {
+      background: var(--blanco);
+      color: var(--azul-oscuro);
+    }
+
+    .foto-card {
+      background: var(--blanco);
+      border: 1px solid var(--linea);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: var(--sombra);
+    }
+
+    .foto-card img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 22px;
+      display: block;
+    }
+
+    .foto-pie {
+      padding: 18px 8px 4px;
+    }
+
+    .foto-pie strong {
+      display: block;
+      color: var(--azul-oscuro);
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .foto-pie span {
+      color: var(--gris);
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .titulo-seccion {
+      max-width: 820px;
+      margin-bottom: 34px;
+    }
+
+    .titulo-seccion span {
+      color: var(--rojo);
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .titulo-seccion h2 {
+      color: var(--azul-oscuro);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    .titulo-seccion p {
+      color: var(--gris);
+      font-size: 1.02rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .tarjeta {
+      background: var(--blanco);
+      border: 1px solid var(--linea);
+      border-radius: 20px;
+      padding: 26px;
+      box-shadow: 0 12px 30px rgba(15, 76, 129, 0.07);
+    }
+
+    .tarjeta h3 {
+      color: var(--azul-oscuro);
+      font-size: 1.22rem;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .tarjeta p,
+    .tarjeta li {
+      color: var(--gris);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      background: #eef5fb;
+      color: var(--azul-oscuro);
+      border: 1px solid var(--linea);
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.88rem;
+    }
+
+    .estadisticas {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .estadistica {
+      background: #eef5fb;
+      border: 1px solid var(--linea);
+      border-radius: 18px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .estadistica strong {
+      display: block;
+      color: var(--azul-oscuro);
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .estadistica span {
+      color: var(--gris);
+      font-weight: bold;
+      font-size: 0.92rem;
+    }
+
+    .trayectoria {
+      display: grid;
+      gap: 18px;
+    }
+
+    .item-trayectoria {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 24px;
+      background: var(--blanco);
+      border: 1px solid var(--linea);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(15, 76, 129, 0.06);
+    }
+
+    .fecha {
+      color: var(--rojo);
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .item-trayectoria h3 {
+      color: var(--azul-oscuro);
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .item-trayectoria p {
+      color: var(--gris);
+    }
+
+    .proyectos {
+      background: var(--azul-oscuro);
+      color: var(--blanco);
+    }
+
+    .proyectos .titulo-seccion h2,
+    .proyectos .titulo-seccion p {
+      color: var(--blanco);
+    }
+
+    .proyectos .titulo-seccion span {
+      color: #ffb4bc;
+    }
+
+    .proyectos .tarjeta {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: none;
+    }
+
+    .proyectos .tarjeta h3,
+    .proyectos .tarjeta p {
+      color: var(--blanco);
+    }
+
+    .meta-proyecto {
+      display: inline-block;
+      color: #c8ddf1;
+      font-weight: bold;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .publicaciones {
+      display: grid;
+      gap: 16px;
+    }
+
+    .publicacion {
+      background: var(--blanco);
+      border: 1px solid var(--linea);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .publicacion strong {
+      color: var(--azul-oscuro);
+    }
+
+    .publicacion p {
+      color: var(--gris);
+      margin-top: 4px;
+      font-size: 0.96rem;
+    }
+
+    .contacto {
+      background:
+        radial-gradient(circle at 80% 0%, rgba(214, 40, 57, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #edf5fb);
+    }
+
+    .contacto-card {
+      background: var(--blanco);
+      border: 1px solid var(--linea);
+      border-radius: 28px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      box-shadow: var(--sombra);
+    }
+
+    .contacto-card h2 {
+      color: var(--azul-oscuro);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .contacto-card p {
+      color: var(--gris);
+    }
+
+    .links-contacto {
+      display: grid;
+      gap: 12px;
+    }
+
+    .link-contacto {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: #eef5fb;
+      border: 1px solid var(--linea);
+      color: var(--azul-oscuro);
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    .link-contacto:hover {
+      background: var(--azul);
+      color: var(--blanco);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #0b1526;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2,
+      .contacto-card {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+      }
+
+      .foto-card img {
+        height: auto;
+      }
+
+      .estadisticas {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .item-trayectoria {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .estadisticas {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .tarjeta,
+      .contacto-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="contenedor">
+      <nav>
+        <a href="#inicio" class="marca">
+          <span class="marca-icono">CG</span>
+          <span>Carlos Enrique George-Reyes</span>
+        </a>
+        <div class="menu">
+          <a href="#perfil">Perfil</a>
+          <a href="#trayectoria">Trayectoria</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#publicaciones">Publicaciones</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="contenedor hero-grid">
+        <div>
+          <span class="etiqueta">Investigador académico · Doctor en Ciencias de la Educación</span>
+          <h1>Carlos Enrique George-Reyes</h1>
+          <h2>Innovación educativa, inteligencia artificial, alfabetización digital y pedagogías emergentes para transformar la educación.</h2>
+          <p>
+            Docente investigador de la Universidad Bolivariana del Ecuador y líder del Grupo de Investigación WISE-IA: Women in Smart Education, Complexity & AI Literacy Hub. Su trabajo articula investigación educativa, tecnologías emergentes, pensamiento complejo, competencias digitales, pedagogía Maker y proyectos internacionales de alto impacto.
+          </p>
+          <div class="botones">
+            <a class="boton boton-principal" href="#contacto">Contactar</a>
+            <a class="boton boton-secundario" href="#publicaciones">Ver publicaciones</a>
+          </div>
+        </div>
+
+        <aside class="foto-card">
+          <!-- Coloca la imagen en la misma carpeta que este archivo HTML y conserva este nombre. -->
+          <img src="Carlos George 3(1).jpeg" alt="Fotografía profesional de Carlos Enrique George-Reyes" />
+          <div class="foto-pie">
+            <strong>Carlos Enrique George-Reyes</strong>
+            <span>Investigador en educación, tecnología e innovación</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="perfil">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span>Perfil académico</span>
+          <h2>Investigación aplicada para futuros educativos más inclusivos, digitales y complejos.</h2>
+          <p>
+            Su trayectoria integra producción científica, dirección de proyectos, formación de investigadores, cooperación internacional y diseño de soluciones educativas basadas en tecnologías emergentes.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="tarjeta">
+            <h3>Líneas de investigación</h3>
+            <p>
+              Innovación educativa, alfabetización digital, competencias digitales, microcredenciales, inteligencia artificial, pensamiento computacional, pensamiento complejo y pedagogía Maker.
+            </p>
+            <div class="tags">
+              <span class="tag">IA educativa</span>
+              <span class="tag">Educación 4.0</span>
+              <span class="tag">Pedagogía Maker</span>
+              <span class="tag">Alfabetización digital</span>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Enfoque internacional</h3>
+            <p>
+              Ha impulsado proyectos y colaboraciones académicas en México, Ecuador, Colombia, Guatemala, Portugal, España, Estonia, Finlandia, Cuba y Alemania.
+            </p>
+            <div class="tags">
+              <span class="tag">Europa</span>
+              <span class="tag">América Latina</span>
+              <span class="tag">Erasmus+</span>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Impacto académico</h3>
+            <p>
+              Autor de más de 40 artículos en revistas de impacto internacional, capítulos de libro, proceedings y desarrollos registrados como propiedad intelectual.
+            </p>
+            <div class="tags">
+              <span class="tag">Scopus</span>
+              <span class="tag">Web of Science</span>
+              <span class="tag">Springer</span>
+              <span class="tag">Routledge</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="estadisticas">
+          <div class="estadistica">
+            <strong>40+</strong>
+            <span>Artículos científicos</span>
+          </div>
+          <div class="estadistica">
+            <strong>5</strong>
+            <span>Registros de propiedad intelectual</span>
+          </div>
+          <div class="estadistica">
+            <strong>35+</strong>
+            <span>Tesis dirigidas</span>
+          </div>
+          <div class="estadistica">
+            <strong>SNI 1</strong>
+            <span>Investigador nacional</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trayectoria">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span>Trayectoria profesional</span>
+          <h2>Cargos académicos, liderazgo institucional y formación de posgrado.</h2>
+          <p>
+            Su actividad profesional combina docencia de posgrado, investigación aplicada, dirección académica y liderazgo en grupos de investigación.
+          </p>
+        </div>
+
+        <div class="trayectoria">
+          <article class="item-trayectoria">
+            <div class="fecha">Desde 2025</div>
+            <div>
+              <h3>Universidad Bolivariana del Ecuador</h3>
+              <p>Docente investigador. Docente de la Maestría en Gestión Educativa y de la Maestría en Internacionalización de la Educación Superior.</p>
+            </div>
+          </article>
+
+          <article class="item-trayectoria">
+            <div class="fecha">Desde 2026</div>
+            <div>
+              <h3>Tecnológico de Monterrey</h3>
+              <p>Investigador asociado del Instituto para el Futuro de la Educación en el grupo interdisciplinario R4C-IRG. Líder del subgrupo Desarrollo y uso de Tecnologías en Educación.</p>
+            </div>
+          </article>
+
+          <article class="item-trayectoria">
+            <div class="fecha">Desde 2024</div>
+            <div>
+              <h3>Centro Universitario de Desarrollo Intelectual</h3>
+              <p>Director del Research and Innovation Hub, unidad de investigación orientada al desarrollo de proyectos educativos y científicos de alto nivel.</p>
+            </div>
+          </article>
+
+          <article class="item-trayectoria">
+            <div class="fecha">2022 a 2025</div>
+            <div>
+              <h3>Estancias postdoctorales e internacionales</h3>
+              <p>Estancia Académica Postdoctoral en el Tecnológico de Monterrey, Universidad de Helsinki y Universidad de Münster. Colaboración académica postdoctoral con la Universidad de Tartu.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="proyectos">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span>Proyectos financiados</span>
+          <h2>Diseño, gestión y liderazgo de iniciativas internacionales de investigación educativa.</h2>
+          <p>
+            Sus proyectos se orientan al desarrollo de plataformas, laboratorios, metodologías y experiencias formativas que conectan innovación educativa, tecnologías emergentes e inclusión.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="tarjeta">
+            <span class="meta-proyecto">European Commission · Erasmus+ · 2025 a 2027</span>
+            <h3>Maker & STEM Education</h3>
+            <p>
+              Proyecto orientado al acceso igualitario de mujeres a pedagogías progresivas para impulsar el desarrollo STEM. Rol: creador del proyecto, diseñador de la propuesta y articulador del consorcio internacional.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <span class="meta-proyecto">NOVUS · Tecnológico de Monterrey · 2025 a 2026</span>
+            <h3>R-Skills Lab.IA</h3>
+            <p>
+              Proyecto enfocado en potenciar habilidades para la investigación mediante plataformas educativas abiertas e inteligencia artificial.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <span class="meta-proyecto">Challenge-Based Research Funding · 2023 a 2024</span>
+            <h3>OpenEdR4C</h3>
+            <p>
+              Plataforma de Educación 4.0 para fortalecer el emprendimiento científico, tecnológico y social mediante el escalamiento de competencias de pensamiento complejo.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <span class="meta-proyecto">Investigación educativa aplicada</span>
+            <h3>Virtual Campus y analíticas educativas</h3>
+            <p>
+              Evaluación del impacto de entornos virtuales, realidad híbrida y tecnologías inmersivas para fortalecer aprendizajes, competencias digitales y pensamiento computacional.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicaciones">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span>Producción científica destacada</span>
+          <h2>Publicaciones recientes sobre IA, pensamiento complejo, STEM, alfabetización digital e innovación educativa.</h2>
+          <p>
+            Selección breve de publicaciones recientes. Esta sección puede ampliarse con DOI, enlaces directos o un listado completo de producción científica.
+          </p>
+        </div>
+
+        <div class="publicaciones">
+          <article class="publicacion">
+            <strong>Rethinking Maker Education: Makerspaces, gender, and STEM skills in the era of inclusive educational intelligence.</strong>
+            <p>Frontiers in Education, 2025. Investigación sobre educación Maker, brechas de género y habilidades STEM.</p>
+          </article>
+
+          <article class="publicacion">
+            <strong>Integration of Artificial Intelligence into the TPACK Model: Transforming Teaching in the Digital Age.</strong>
+            <p>Foro de Educación, 2026. Análisis de la integración de la IA en modelos de conocimiento pedagógico, tecnológico y disciplinar.</p>
+          </article>
+
+          <article class="publicacion">
+            <strong>Perceptions of ChatGPT and the Complexity of its Impact Among Higher Education Students.</strong>
+            <p>Educational Process: International Journal, 2025. Evidencia comparativa en diez países de América Latina y Europa.</p>
+          </article>
+
+          <article class="publicacion">
+            <strong>Developing scientific entrepreneurship and complex thinking skills: creating narrative scripts using ChatGPT.</strong>
+            <p>Frontiers in Education, 2024. Estudio sobre ChatGPT, emprendimiento científico y pensamiento complejo.</p>
+          </article>
+
+          <article class="publicacion">
+            <strong>The Metaverse and complex thinking: opportunities, experiences, and future lines of research.</strong>
+            <p>Frontiers in Education, 2023. Exploración de experiencias educativas en metaverso y líneas futuras de investigación.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <div class="contenedor">
+        <div class="contacto-card">
+          <div>
+            <h2>Contacto académico</h2>
+            <p>
+              Para colaboraciones académicas, proyectos internacionales, conferencias, dirección de investigación, redes científicas o iniciativas sobre innovación educativa, inteligencia artificial y transformación digital de la educación.
+            </p>
+          </div>
+
+          <div class="links-contacto">
+            <a class="link-contacto" href="mailto:cegeorger@ube.edu.ec">cegeorger@ube.edu.ec <span>↗</span></a>
+            <a class="link-contacto" href="https://orcid.org/0000-0002-2529-9155" target="_blank" rel="noopener">ORCID <span>↗</span></a>
+            <a class="link-contacto" href="https://scholar.google.com/citations?user=UZdBpvgAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar <span>↗</span></a>
+            <a class="link-contacto" href="https://www.linkedin.com/in/carlosgeorge/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Carlos Enrique George-Reyes. Página profesional académica.</p>
+  </footer>
+</body>
+</html>
